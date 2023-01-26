@@ -4,6 +4,20 @@
 [![Docker Stars](https://img.shields.io/docker/stars/randomninjaatk/readarr-extended?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
 [![Docker Hub](https://img.shields.io/badge/Open%20On-DockerHub-blue?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
 
+<img src="https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/readarr.png" width="200">
+
+
+### What is Readarr Extended:
+
+* Linuxserver.io Readarr docker container (develop tag)
+* Additional packages and scripts added to the container to provide additional functionality
+
+Readarr itself is not modified in any way, all changes that are pushed to Readarr via public Readarr API's. This is strictly Readarr Develop branch
+
+For more details, visit the [Wiki](https://github.com/RandomNinjaAtk/docker-readarr-extended/wiki)
+
+This containers base image is provided by: [linuxserver/sonarr](https://github.com/linuxserver/docker-readarr)
+
 ## Readarr + Extended Scripts
 * [Readarr](https://readarr.com/) Develop (develop branch), base image provided by [LinuxServer.io Team](https://github.com/linuxserver/docker-readarr)
 
