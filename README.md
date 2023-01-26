@@ -26,7 +26,7 @@ The architectures supported by this image are:
 
 ## Application Setup
 
-Access the webui at `<your-ip>:8787`, for more information check out [Redarr](https://readarr.com/).
+Access the webui at `<your-ip>:8787`, for more information check out [Readarr](https://readarr.com/).
 
 ## Parameters
 
