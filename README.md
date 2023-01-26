@@ -16,10 +16,7 @@ Readarr itself is not modified in any way, all changes that are pushed to Readar
 
 For more details, visit the [Wiki](https://github.com/RandomNinjaAtk/docker-readarr-extended/wiki)
 
-This containers base image is provided by: [linuxserver/sonarr](https://github.com/linuxserver/docker-readarr)
-
-## Readarr + Extended Scripts
-* [Readarr](https://readarr.com/) Develop (develop branch), base image provided by [LinuxServer.io Team](https://github.com/linuxserver/docker-readarr)
+This containers base image is provided by: [linuxserver/readarr](https://github.com/linuxserver/docker-readarr)
 
 ## Supported Architectures
 
