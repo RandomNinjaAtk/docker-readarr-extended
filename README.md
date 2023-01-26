@@ -36,6 +36,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | --- | --- |
 | `-p 8787` | The port for the Readarr webinterface |
 | `-v /config` | Configuration files for Readarr. (<strong>required path</strong>)|
+| `-e enableAutoConfig=true` | true = enabled :: Enables AutoConfig script to run after startup |
+| `-e enableQueueCleaner=true` | true = enabled :: Enables QueueCleaner Script that automatically removes stuck downloads that cannot be automatically imported on a 15 minute interval |
 
 ## Usage
 
@@ -51,6 +53,8 @@ docker create \
   -e TZ=America/New_York \
   -e PUID=1000 \
   -e PGID=1000 \
+  -e enableAutoConfig=true \
+  -e enableQueueCleaner=true \
   randomninjaatk/readarr-extended:latest
 ```
 
@@ -71,6 +75,8 @@ services:
       - TZ=America/New_York
       - PUID=1000
       - PGID=1000
+      - enableAutoConfig=true
+      - enableQueueCleaner=true
     ports:
       - 8787:8787
     restart: unless-stopped
