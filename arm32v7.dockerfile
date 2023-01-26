@@ -21,7 +21,7 @@ RUN \
 		ffmpeg
 	
 # copy local files
-#COPY root/ /
+COPY root/ /
 
 # set work directory
 WORKDIR /config
