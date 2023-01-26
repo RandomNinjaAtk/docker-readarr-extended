@@ -4,7 +4,7 @@
 [![Docker Stars](https://img.shields.io/docker/stars/randomninjaatk/readarr-extended?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
 [![Docker Hub](https://img.shields.io/badge/Open%20On-DockerHub-blue?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
 
-## Readarr + Extended Script Features
+## Readarr + Extended Scripts
 * [Readarr](https://readarr.com/) Develop (develop branch), base image provided by [LinuxServer.io Team](https://github.com/linuxserver/docker-readarr)
 
 ## Supported Architectures
