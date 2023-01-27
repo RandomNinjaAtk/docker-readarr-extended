@@ -49,6 +49,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-v /config` | Configuration files for Readarr. (<strong>required path</strong>)|
 | `-e enableAutoConfig=true` | true = enabled :: Enables AutoConfig script to run after startup |
 | `-e enableQueueCleaner=true` | true = enabled :: Enables QueueCleaner Script that automatically removes stuck downloads that cannot be automatically imported on a 15 minute interval |
+| `-e plexUrl=http://x.x.x.x:32400` | ONLY used if PlexNotify.bash is used...|
+| `-e plexToken=` | ONLY used if PlexNotify.bash is used... |
 
 ## Usage
 
@@ -66,6 +68,8 @@ docker create \
   -e PGID=1000 \
   -e enableAutoConfig=true \
   -e enableQueueCleaner=true \
+  -e plexUrl=http://x.x.x.x:32400 \
+  -e plexToken=Token_Goes_Here \
   randomninjaatk/readarr-extended:latest
 ```
 
@@ -88,6 +92,8 @@ services:
       - PGID=1000
       - enableAutoConfig=true
       - enableQueueCleaner=true
+      - plexUrl=http://x.x.x.x:32400
+      - plexToken=Token_Goes_Here
     ports:
       - 8787:8787
     restart: unless-stopped
