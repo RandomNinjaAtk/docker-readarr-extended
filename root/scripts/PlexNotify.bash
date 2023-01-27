@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
-scriptVersion=1.0.000
-if [ -z "$readarr_author_path" ]; then
-	readarr_author_path="$1"
-	notfidedBy=Extended_Script
-else
-	notfidedBy=Readarr
-fi
+scriptVersion=1.0.001
 rootFolderPath="$(dirname "$readarr_author_path")"
 
 # auto-clean up log file to reduce space usage
@@ -76,7 +70,7 @@ for key in ${!plexKeys[@]}; do
 	if echo "$plexKeyLibraryData" | grep "\"@path\": \"$rootFolderPath" | read; then
 		plexFolderEncoded="$(jq -R -r @uri <<<"$readarr_author_path")"
 		curl -s "$plexUrl/library/sections/$plexKey/refresh?path=$plexFolderEncoded&X-Plex-Token=$plexToken"
-		log  "Plex Scan notification sent! ($plexKey :: $lidarr_artist_path)"
+		log  "Plex Scan notification sent! ($plexKey :: $readarr_author_path)"
 	fi
 done
 
