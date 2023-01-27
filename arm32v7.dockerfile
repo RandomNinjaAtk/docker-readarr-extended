@@ -18,7 +18,10 @@ RUN \
 	echo "************ install and update packages ************" && \
 	apk add -U --update --no-cache \
 		jq \
-		ffmpeg
+		py3-pip && \
+	echo "************ install python packages ************" && \
+	pip install --upgrade --no-cache-dir -U \
+		yq
 	
 # copy local files
 COPY root/ /
