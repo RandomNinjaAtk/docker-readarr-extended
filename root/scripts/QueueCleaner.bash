@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-scriptVersion="1.0.000"
+scriptVersion="1.0.001"
 
 if [ -z "$arrUrl" ] || [ -z "$arrApiKey" ]; then
   arrUrlBase="$(cat /config/config.xml | xq | jq -r .Config.UrlBase)"
@@ -10,7 +10,7 @@ if [ -z "$arrUrl" ] || [ -z "$arrApiKey" ]; then
   fi
   arrApiKey="$(cat /config/config.xml | xq | jq -r .Config.ApiKey)"
   arrPort="$(cat /config/config.xml | xq | jq -r .Config.Port)"
-  arrUrl="http://127.0.0.1:${arrPort}${arrUrlBase}"
+  arrUrl="http://localhost:${arrPort}${arrUrlBase}"
 fi
 
 # auto-clean up log file to reduce space usage
@@ -26,7 +26,7 @@ log () {
   echo $m_time" :: QueueCleaner :: $scriptVersion :: "$1
 }
 
-arrQueueData="$(curl -s "$arrUrl/api/v1/queue?page=1&pagesize=200&sortDirection=descending&sortKey=progress&includeUnknownArtistItems=true&apikey=${arrApiKey}" | jq -r .records[])"
+arrQueueData="$(curl -s "$arrUrl/api/v1/queue?page=1&pagesize=200&sortDirection=descending&sortKey=progress&includeUnknownAuthorItems=true&apikey=${arrApiKey}" | jq -r .records[])"
 arrQueueIds=$(echo "$arrQueueData" | jq -r 'select(.status=="completed") | select(.trackedDownloadStatus=="warning") | .id')
 arrQueueIdsCount=$(echo "$arrQueueData" | jq -r 'select(.status=="completed") | select(.trackedDownloadStatus=="warning") | .id' | wc -l)
 if [ $arrQueueIdsCount -eq 0 ]; then
@@ -40,7 +40,7 @@ else
   done
 fi
 
-arrQueueData="$(curl -s "$arrUrl/api/v1/queue?page=1&pagesize=200&sortDirection=descending&sortKey=progress&includeUnknownArtistItems=true&apikey=${arrApiKey}" | jq -r .records[])"
+arrQueueData="$(curl -s "$arrUrl/api/v1/queue?page=1&pagesize=200&sortDirection=descending&sortKey=progress&includeUnknownAuthorItems=true&apikey=${arrApiKey}" | jq -r .records[])"
 arrQueueIds=$(echo "$arrQueueData" | jq -r 'select(.status=="failed") | select(.trackedDownloadStatus=="warning") | .id')
 arrQueueIdsCount=$(echo "$arrQueueData" | jq -r 'select(.status=="failed") | select(.trackedDownloadStatus=="warning") | .id' | wc -l)
 if [ $arrQueueIdsCount -eq 0 ]; then
