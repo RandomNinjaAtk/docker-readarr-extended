@@ -14,7 +14,7 @@
     "Metadata": [
         {
             "writeAudioTags":"sync",
-            "scrubAudioTags": "true",
+            "scrubAudioTags": "false",
             "writeBookTags": "sync",
             "updateCovers": "true",
             "embedMetadata":"true"
