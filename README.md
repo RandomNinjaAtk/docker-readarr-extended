@@ -18,6 +18,14 @@ For more details, visit the [Wiki](https://github.com/RandomNinjaAtk/docker-read
 
 This containers base image is provided by: [linuxserver/readarr](https://github.com/linuxserver/docker-readarr)
 
+
+### All Arr-Extended Apps:
+* [sabnzbd-extended](https://github.com/RandomNinjaAtk/docker-sabnzbd-extended)
+* [lidarr-extended](https://github.com/RandomNinjaAtk/docker-lidarr-extended)
+* [radarr-extended](https://github.com/RandomNinjaAtk/docker-radarr-extended)
+* [sonarr-extended](https://github.com/RandomNinjaAtk/docker-sonarr-extended)
+* [readarr-extended](https://github.com/RandomNinjaAtk/docker-readarr-extended)
+
 ## Supported Architectures
 
 The architectures supported by this image are:
