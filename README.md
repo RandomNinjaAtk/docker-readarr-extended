@@ -26,6 +26,16 @@ This containers base image is provided by: [linuxserver/readarr](https://github.
 * [sonarr-extended](https://github.com/RandomNinjaAtk/docker-sonarr-extended)
 * [readarr-extended](https://github.com/RandomNinjaAtk/docker-readarr-extended)
 
+## Features
+* [Auto Configure Readarr with optimized settings](https://github.com/RandomNinjaAtk/docker-readarr-extended/wiki/AutoConfig.bash)
+  * Optimized file/folder naming (based on trash guides)
+  * Configures media management settings
+  * Configures metadata settings
+* [Plex Notify Script](https://github.com/RandomNinjaAtk/docker-readarr-extended/wiki/PlexNotify.bash)
+  * Reduce Plex scanning by notifying Plex the exact folder to scan
+* [Queue Cleaner Script](https://github.com/RandomNinjaAtk/docker-readarr-extended/wiki/QueueCleaner.bash)
+  * Automatically removes downloads that have a "warning" or "failed" status that will not auto-import into Sonarr, which enables Sonarr to automatically re-search for the Title
+
 ## Supported Architectures
 
 The architectures supported by this image are:
