@@ -32,6 +32,16 @@ fi
 if [ ! -d "/config/extended/configs" ]; then
 	mkdir -p "/config/extended/configs"
 fi
+
+echo "Setting up scripts..."
+if [  -f "/config/extended/scripts/QueueCleaner.bash" ]; then
+	echo "Removing old script, QueueCleaner.bash"
+	rm "/config/extended/scripts/QueueCleaner.bash"
+fi
+echo "Downloading and setting up QueueCleaner.bash"
+curl "https://raw.githubusercontent.com/RandomNinjaAtk/arr-scripts/main/QueueCleaner.bash" -o "/config/extended/scripts/QueueCleaner.bash"
+chmod 777 "/config/extended/scripts/QueueCleaner.bash"
+
 # set permissions
 chmod 777 -R /usr/local/sma
 find /config/extended -type d -exec chmod 777 {} \;
