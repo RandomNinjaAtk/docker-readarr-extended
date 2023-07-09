@@ -1,8 +1,9 @@
+# Deprecated
+
+This repository is now deprecated, will no longer be updated and is being archived. 
+
 # [RandomNinjaAtk/readarr-extended](https://github.com/RandomNinjaAtk/docker-readarr-extended)
-[![Docker Build](https://img.shields.io/docker/cloud/automated/randomninjaatk/readarr-extended?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
-[![Docker Pulls](https://img.shields.io/docker/pulls/randomninjaatk/readarr-extended?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
-[![Docker Stars](https://img.shields.io/docker/stars/randomninjaatk/readarr-extended?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
-[![Docker Hub](https://img.shields.io/badge/Open%20On-DockerHub-blue?style=flat-square)](https://hub.docker.com/r/randomninjaatk/readarr-extended)
+
 
 <img src="https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/readarr.png" width="200">
 
